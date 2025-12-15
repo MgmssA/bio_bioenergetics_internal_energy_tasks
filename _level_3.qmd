@@ -1,6 +1,33 @@
 ## Stufe III
 
 ```{r}
+#| output: false
+
+task <- tibble::tibble(
+    task = "Was hat beigetragen?",
+    level = 3,
+    base_points = 8,
+    max_base_points = 8 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+Ein offenes System ohne Massenaustausch besteht aus einem Gas. Das Gas wird zuerst mit $106\,\kilojoule$ erwärmt und dehnt sich in einem Kolben aus. Dabei verrichtet es die Arbeit $65\,\kilojoule$ aus. Anschliessend verliert es einen Wärmeenergiegehalt von $23\,\kilojoule$. Durch Kraft von aussen wird eine Kompressionsarbeit von $46\,\kilojoule$ an dem Gas verrichtet. Welche interne Energie besitzt das System am Ende? 
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für das korrekte Vorgehen bei der Lösung mathematischer Aufgaben vergeben. Weiterhin werden Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben.]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[Acht Punkte für jede Stufe.]{fg="green-shade-3e"}
+:::
+
+```{r}
 #| label: work-with-velocity
 #| output: false
 
@@ -26,6 +53,60 @@ Es gibt Systeme durch deren Wände Arbeit hindurchgeht aber weder Wärme noch Ma
 
 ::: {.content-hidden unless-meta="show-rating"}
 [Wenn die Luftmassen die Hänge der Alpen nach Norden hinunterfallen wächst der Atmosphärendruck\*. Durch die Kompression\* erwärmt sich die Luft\* und bleibt warm, weil keine Wärme an die umgebende Luft abgegeben werden kann\*. Auf der Südseite expandiert die aufsteigende Luft\* durch den fallenden Luftdruck\* und kühlt dabei ab\*, weil sie keine Wärme von der Umgebung bekommt\*.]{fg="green-shade-3e"}
+:::
+
+```{r}
+#| output: false
+
+task <- tibble::tibble(
+    task = "Schwarzes Loch",
+    level = 3,
+    base_points = 8,
+    max_base_points = 8 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+Was für ein System stellt ein Schwarzes Loch dar? Ein Schwarzes Loch ist eine Sternleiche, dessen Gravitation so gross ist, dass selbst Licht nicht entkommen kann? 
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für das korrekte Vorgehen bei der Lösung mathematischer Aufgaben vergeben. Weiterhin werden Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben.]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[Jeweils zwei Punkte für jeden Systemfaktor.]{fg="green-shade-3e"}
+:::
+
+```{r}
+#| output: false
+
+task <- tibble::tibble(
+    task = "Universum",
+    level = 3,
+    base_points = 8,
+    max_base_points = 8 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+Was für ein System stellt das gesamte Universum dar?
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für das korrekte Vorgehen bei der Lösung mathematischer Aufgaben vergeben. Weiterhin werden Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben.]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[Jeweils zwei Punkte für jeden Systemfaktor.]{fg="green-shade-3e"}
 :::
 
 

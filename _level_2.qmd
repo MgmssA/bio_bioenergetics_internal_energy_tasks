@@ -1,14 +1,13 @@
 ## Stufe II
 
 ```{r}
-#| label: simple-push
 #| output: false
 
 task <- tibble::tibble(
-    task = "Einfaches Heben",
+    task = "Zwei Systeme und Umgebung",
     level = 2,
     base_points = 7,
-    max_base_points = 9 
+    max_base_points = 7 
 ) |>
     dplyr::mutate(
         level_points = base_points * level,
@@ -20,27 +19,65 @@ tasks <- tasks |> tibble::add_row(task)
 
 ### `{r} task$task`
 
-Du trägst eine Kiste Sprudel mit einer Masse von $m = 18.4\,\kilogram$ vom Erdgeschoss in das erste Stockwerk, dass sich auf einer Höhe $h = 3.2\,\meter$ befindet. Welche Arbeit verrichtest Du dabei? Von wo nach wo fließt die Energie? Rechne mit $g = 9.8\,\newtonperkilogram$ (Danke Daniel & Michel).  
+System (s) ist ein Heizstab, das mithilfe elektrischer Energie $100\,\kilojoule$ Wärme über einen beliebigen Zeitraum produziert. Dabei wurden $116\,\kilojoule$ elektrischer Energie verbraucht. Die Wärme wurde genutzt, um ein Wassertank zu erwärmen. Dieser verliert im Laufe der betrachteten Zeit $15\,\kilojoule$ an die Umgebung. Wieviel Wärmeenergie hat der Wasseertank abbekommen? Wieviel Wärmeenergie wurde an die Umgebung verloren? 
 
 [Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für das korrekte Vorgehen bei der Lösung mathematischer Aufgaben vergeben. Weiterhin werden Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben.]{fg="purple"}
 
 ::: {.content-hidden unless-meta="show-rating"}
-[Die zuständige Gleichung ist die Definition der mechanischen Arbeit:
-$$
-W = -F \Delta s.\;\star
-$$
-Die wirkende Kraft ist die Gewichtskraft
-$$
-F = m g = 18.4\,\kilogram \cdot 9.8\,\newtonperkilogram \approx 180\,\newton.\;\star\star
-$$
-Die Wirkstrecke der Kraft ist
-$$
-\Delta s = s\sub{Ende} - s\sub{Anfang} = h - 0 = 3.2\,\meter - 0\,\meter = 3.2\,\meter.\;\star\star
-$$
-Un daraus ergibt sich die Arbeit
-$$
-W = -180\,\newton \cdot 3.2\,\meter = -577\,\joule.\;\star\star 
-$$
-Du verrichtest eine Arbeit von $-577\,\joule$\*. Die Energie fließt von Dir in die Lageenergie des Systems Kiste\*.]{fg="green-shade-3"}
+[Ansatz mit Summe\*. Umstellen\* und lösen\*\*. And die Umgebung abgegeben aufstellen und lösen\*\*\*.]{fg="green-shade-3"}
+:::
+
+```{r}
+#| output: false
+
+task <- tibble::tibble(
+    task = "Energieerhaltung",
+    level = 2,
+    base_points = 6,
+    max_base_points = 6 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+Was sagt die Energieerhaltung grundsätzlich aus? Was bedeutet das für ein isoliertes System? Was bedeutet das für ein offenes System?  
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[Jeweils zwei Punkte pro Aussage.]{fg="green-shade-3"}
+:::
+
+```{r}
+#| output: false
+
+task <- tibble::tibble(
+    task = "Die 10 Prozent Regel",
+    level = 2,
+    base_points = 6,
+    max_base_points = 7 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+In einem Ökosystem wird die Biomasse als Nahrung zur Energiegewinnnung genutzt. Dabei wird die Nahrung in Form von Biomasse von den Pflanzen über die Pflanzenfresser, zu den Fleischfresser, und schliesslich zum Apexpredator weitergereicht. In jeder Stufe werden höchstens 10% der Biomasse für Arbeit verwertet. Wenn die anfängliche Biomasse den Energiegehalt $E_0$ besitzt, wieviel ist nach vier Stufen davon übrig? Wieviel ist insgesamt verloren gegangen? 
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für das korrekte Vorgehen bei der Lösung mathematischer Aufgaben vergeben. Weiterhin werden Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben.]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[Ansatz\*, lösen\*\*. And die Umgebung abgegeben aufstellen und lösen\*\*\*.]{fg="green-shade-3"}
 :::
 
