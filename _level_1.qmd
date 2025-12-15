@@ -1,0 +1,29 @@
+## Stufe I
+
+```{r}
+#| output: false
+
+task <- tibble::tibble(
+    task = "Systeme",
+    level = 1,
+    base_points = 12,
+    max_base_points = 12 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+Beschreibe die drei wichtigsten Systeme, die in der Thermodynamik eine Rolle spielen. Gehe dabei auf die Faktoren ein, die bei den Veränderung der Systeme eine Rolle spielen.   
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[Die Thermodynamik ist ein Teilbereich der Naturwissenschaften, der sich mit Wärme\*, Arbeit\*, Temperatur\* und ihren Beziehungen zur Energie\* beschäftigt.]{fg="green-shade-3"}
+:::
+

@@ -1,0 +1,50 @@
+## Stufe III
+
+```{r}
+#| label: work-with-velocity
+#| output: false
+
+task <- tibble::tibble(
+    task = "Arbeit mit Geschwindigkeit",
+    level = 3,
+    base_points = 4,
+    max_base_points = 4 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+Zeige theoretisch, dass
+$$
+W = -F \Delta s
+$$
+dasselbe ist wie
+$$
+W = -F v \Delta t,
+$$
+wobei $v$ die Geschwindigkeit ist und $\Delta t$ eine Zeitspanne.
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für das korrekte Vorgehen bei der Lösung mathematischer Aufgaben vergeben. Weiterhin werden Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben.]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[Finde zuerst einen Ausdruck, um das $\Delta s$ zu ersetzen\*. Da die Geschwindigkeit eine Rolle spielt, bietet sich 
+$$
+v = \frac{\Delta s}{\Delta t}\;\star 
+$$
+an. Daraus gewinnen wir
+$$
+\Delta s = v \Delta t.\;\star
+$$
+Wenn wir das in die Gleichung der mechanischen Arbeit einfügen ergibt sich die gewünschte Relation\*.]{fg="green-shade-3e"}
+:::
+
+
+
+
+

@@ -1,0 +1,46 @@
+## Stufe II
+
+```{r}
+#| label: simple-push
+#| output: false
+
+task <- tibble::tibble(
+    task = "Einfaches Heben",
+    level = 2,
+    base_points = 7,
+    max_base_points = 9 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+Du trägst eine Kiste Sprudel mit einer Masse von $m = 18.4\,\kilogram$ vom Erdgeschoss in das erste Stockwerk, dass sich auf einer Höhe $h = 3.2\,\meter$ befindet. Welche Arbeit verrichtest Du dabei? Von wo nach wo fließt die Energie? Rechne mit $g = 9.8\,\newtonperkilogram$ (Danke Daniel & Michel).  
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für das korrekte Vorgehen bei der Lösung mathematischer Aufgaben vergeben. Weiterhin werden Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben.]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[Die zuständige Gleichung ist die Definition der mechanischen Arbeit:
+$$
+W = -F \Delta s.\;\star
+$$
+Die wirkende Kraft ist die Gewichtskraft
+$$
+F = m g = 18.4\,\kilogram \cdot 9.8\,\newtonperkilogram \approx 180\,\newton.\;\star\star
+$$
+Die Wirkstrecke der Kraft ist
+$$
+\Delta s = s\sub{Ende} - s\sub{Anfang} = h - 0 = 3.2\,\meter - 0\,\meter = 3.2\,\meter.\;\star\star
+$$
+Un daraus ergibt sich die Arbeit
+$$
+W = -180\,\newton \cdot 3.2\,\meter = -577\,\joule.\;\star\star 
+$$
+Du verrichtest eine Arbeit von $-577\,\joule$\*. Die Energie fließt von Dir in die Lageenergie des Systems Kiste\*.]{fg="green-shade-3"}
+:::
+
