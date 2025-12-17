@@ -88,8 +88,8 @@ Was für ein System stellt ein Schwarzes Loch dar? Ein Schwarzes Loch ist eine S
 task <- tibble::tibble(
     task = "Universum",
     level = 3,
-    base_points = 8,
-    max_base_points = 8 
+    base_points = 10,
+    max_base_points = 10 
 ) |>
     dplyr::mutate(
         level_points = base_points * level,
@@ -101,7 +101,7 @@ tasks <- tasks |> tibble::add_row(task)
 
 ### `{r} task$task`
 
-Was für ein System stellt das gesamte Universum dar?
+Was für ein System stellt das gesamte Universum dar? Wenn Du Dir die Übertragung der Arbeit oder Umwandlung von Energie von System zu System vorstellst, was ist denn das endgültige Schicksal des Universums?
 
 [Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für das korrekte Vorgehen bei der Lösung mathematischer Aufgaben vergeben. Weiterhin werden Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben.]{fg="purple"}
 
