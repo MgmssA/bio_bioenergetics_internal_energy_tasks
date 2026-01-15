@@ -1,0 +1,23 @@
+---
+title: |
+    <p>![](style/mgmss_symbol_color.png){width=40px}</p>
+    Bioenergetik - Innere Energie
+subtitle: 'Wo wird die Lebensenergie gespeichert?<br><small>Aufgaben</small>'
+date: 2025-12-14 
+date-modified: 2025-12-14
+author: Călin Aurel Drăgan
+abstract: 'Das Leben braucht offensichtlich Energie: das bloße Dasein verlangt nach Energie, selbst wenn man nichts tut. Wenn Du aber Energie gewinnst, dann geschieht das nicht immer unbedingt dann, wenn Du die Energie brauchst. Fast alles im Universum besitzt die Gabe Energie innerhalb von sich selbst zu speichern. Wir werden eine kurze Zeit darauf verwenden, uns diese Eigenschaft anzusehen.'
+# bibliography: references.bib
+format: 
+    biodoc-html:
+        include-in-header: _includes/_in_header.html
+        # include-after-body: _includes/_after_body.html
+        embed-resources: false
+        self-contained-math: false
+has-fontawesome: false
+has-math: true
+has-rating: true
+show-rating: false
+filters:
+  - highlight-text
+---

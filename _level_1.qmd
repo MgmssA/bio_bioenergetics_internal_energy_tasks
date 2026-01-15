@@ -1,0 +1,84 @@
+## Stufe I
+
+```{r}
+#| output: false
+
+task <- tibble::tibble(
+    task = "Systeme",
+    level = 1,
+    base_points = 12,
+    max_base_points = 12 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+Beschreibe die drei wichtigsten Systeme, die in der Thermodynamik eine Rolle spielen. Erwähne dabei die Faktoren ein, die bei den möglichen Veränderungen der Systeme eine Rolle spielen. Anders gesagt, nenne welche Faktoren durch die Wände der Systeme gehen und innerhalb des Systems Veränderungen auslösen.   
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[Isoliertes System\*: es wird keine Arbeit, keine Wärme, keine Masse mit der Umgebung ausgetauscht\*\*\*. Geschlossenes System\*: es wird keine Masse ausgetauscht aber Wärme und Arbeit\*\*\*. Offenes System: es werden alle drei Größen mit der Umgebung ausgetauscht\*\*\*.]{fg="green-shade-3"}
+:::
+
+```{r}
+#| output: false
+
+task <- tibble::tibble(
+    task = "Beispiele für Systeme",
+    level = 1,
+    base_points = 18,
+    max_base_points = 18 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+Ordne den folgenden Systemen eine im Idealfall zutreffende thermodynamische Systemkategorie zu: Mensch, gefüllte Thermoskanne, Topf mit kochendem Wasser, Kühlschrank, Haus, Bakterium. Erkläre warum mithilfe der thermodynamischen Systeme und der Faktoren, die durch die Wände gehen. 
+
+<!-- Let factors be in a cell in the table. Show an exemplary table. -->
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[Offen: Mensch, Topf mit kochendem Wasser ohne Deckel, Bakterium\*\*\*. Alle drei Faktoren gehen durch die Wände\*\*\*. Geschlossen: Haus (Fenster zu), Thermoskanne (real) Kühlschrank (real)\*\*\*, es geht keine Masse durch, nur Wärme\*\*\* und hier keine Arbeit; Isoliert: Haus (ideal), Thermosflasche (ideal), Kühlschrank (ideal)\*\*\*, es geht nichts durch die Wände durch\*\*\*.]{fg="green-shade-3"}
+:::
+
+```{r}
+#| output: false
+
+task <- tibble::tibble(
+    task = "Innere Energie",
+    level = 1,
+    base_points = 7,
+    max_base_points = 7 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+Gib die Definition der Änderung der inneren Energie an. Gleichung, Benennung der Variablen, Einheiten.    
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[Die Änderung der inneren Energie $\Delta U$\* wird in $[\joule]$\* angegeben und wird einzig durch Wärmeenergie $Q$\* und mechanischer Arbeit $W$\*, beides in $[\joule]$\*\* angegeben, verändert nach der Gleichung $\Delta U = Q + W$\*.]{fg="green-shade-3"}
+:::

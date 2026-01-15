@@ -1,0 +1,135 @@
+## Stufe III
+
+```{r}
+#| output: false
+
+task <- tibble::tibble(
+    task = "Was hat beigetragen?",
+    level = 3,
+    base_points = 8,
+    max_base_points = 8 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+Ein geschlossenes System ohne Massenaustausch besteht aus einem Gas. Das Gas wird zuerst mit $106\,\kilojoule$ erwärmt und dehnt sich in einem Kolben aus. Dabei verrichtet es die Arbeit $65\,\kilojoule$ aus. Anschliessend verliert es einen Wärmeenergiegehalt von $23\,\kilojoule$. Durch Kraft von aussen wird eine Kompressionsarbeit von $46\,\kilojoule$ an dem Gas verrichtet. Wie hat sich die innere Energie des Systems zwischen Anfang und Ende der vier Schritte verändert? 
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für das korrekte Vorgehen bei der Lösung mathematischer Aufgaben vergeben. Weiterhin werden Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben.]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[Die innere Energie ist
+$$
+\Delta U = Q\sub{gesamt} + W\sub{gessamt}.
+$$
+Es gibt vier Schritte, die das System durchläuft und die innere Energie beeinflussen. Aus der Sicht des Systems heraus, und unter Verwendung der korrekten Vorzeichen, liegt vor:
+$$
+Q_1 = +106\,\kilojoule, W_2 = -65\,\kilojoule, Q_3 = -23\,\kilojoule, W_4 = +46\,\kilojoule.
+$$
+Daraus ergibt sich
+$$
+Q\sub{gesamt} = Q_1 + Q_3 = +106\,\kilojoule + (-23\,\kilojoule) = 83\,\kilojoule\;**
+$$
+und
+$$
+W\sub{gesamt} = W_2 + W_4 = -65\,\kilojoule + 46\,\kilojoule = -19\,\kilojoule\;**
+$$
+Für die Veränderung der inneren Energie bedeutet das
+$$
+\Delta U = 83\,\kilojoule + (-19\,\kilojoule) = 64\,\kilojoule.\;**
+$$
+Am Ende der vier Schritte hat sich die innere Energie um $64\,\kilojoule$ erhöht\*\*.]{fg="green-shade-3"}
+:::
+
+```{r}
+#| label: work-with-velocity
+#| output: false
+
+task <- tibble::tibble(
+    task = "Adiabatisches System",
+    level = 3,
+    base_points = 8,
+    max_base_points = 8 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+Es gibt Systeme durch deren Wände Arbeit hindurchgeht aber weder Wärme noch Masse. Solche Systeme heissen adiabatische Systeme. Luftmasse können so reagieren und führen zu sonderbaren Effekten. Der Wind namens Föhn ist so ein Beispiel. Erkläre warum die Luftmassen des Föhn warm werden, wenn der Luftstrom die Alpen nach Norden hinunterfällt. Was passiert auf der Südseite, wenn die Luftmassen dort aufsteigen?
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für das korrekte Vorgehen bei der Lösung mathematischer Aufgaben vergeben. Weiterhin werden Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben.]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[Wenn die Luftmassen die Hänge der Alpen nach Norden hinunterfallen wächst der Atmosphärendruck\*. Durch die Kompression\* erwärmt sich die Luft\* und bleibt warm, weil keine Wärme an die umgebende Luft abgegeben werden kann\*. Auf der Südseite expandiert die aufsteigende Luft\* durch den fallenden Luftdruck\* und kühlt dabei ab\*, weil sie keine Wärme von der Umgebung bekommt\*.]{fg="green-shade-3"}
+:::
+
+```{r}
+#| output: false
+
+task <- tibble::tibble(
+    task = "Schwarzes Loch",
+    level = 3,
+    base_points = 8,
+    max_base_points = 8 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+Was für ein thermodynamisches System stellt ein Schwarzes Loch dar? Ein Schwarzes Loch ist eine Sternleiche, dessen Gravitation so gross ist, dass selbst Licht nicht entkommen kann. 
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für das korrekte Vorgehen bei der Lösung mathematischer Aufgaben vergeben. Weiterhin werden Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben.]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[In einem schwarzen Loch geht hinein Strahlungsenergie und Masse. damit verhält es sich wie ein offenes System\*\*\*\*. Auf der anderen Seite kommt nichts aus dem schwarzen Loch wieder heraus. Damit verhält sich das Innere wie ein isoliertes System\*\*\*\*.]{fg="green-shade-3"}
+:::
+
+```{r}
+#| output: false
+
+task <- tibble::tibble(
+    task = "Universum",
+    level = 3,
+    base_points = 10,
+    max_base_points = 10 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+Was für ein System stellt das gesamte Universum dar? Wenn Du Dir die Übertragung der Arbeit oder Umwandlung von Energie von System zu System vorstellst, was ist denn das endgültige Schicksal des Universums?
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für das korrekte Vorgehen bei der Lösung mathematischer Aufgaben vergeben. Weiterhin werden Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben.]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[Das Universum entstand mit dem Big Bang und stellt ein isoliertes System dar. Alle Energie, die im Universum damals vorhanden war, ist auch heute vorhanden und wird immer vorhanden sein\*\*\*\*\*. Da bei jeder Energieumwandlung ein Teil immer als Wärme oder Chaos heraus kommt, wird sich die gesamte Energie im Universum verteilen. Da das Universum sich vergrössert, wird die Energie eventuell so dünn verteilt werden, dass nichts mehr geht. Ein dunkler kalter Tod\*\*\*\*\*.]{fg="green-shade-3"}
+:::
+
+
+
+
+

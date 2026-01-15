@@ -1,0 +1,116 @@
+## Stufe II
+
+```{r}
+#| output: false
+
+task <- tibble::tibble(
+    task = "Zwei Systeme und Umgebung",
+    level = 2,
+    base_points = 8,
+    max_base_points = 8 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+System (s) ist ein Heizstab, das mithilfe elektrischer Energie $100\,\kilojoule$ Wärme über einen beliebigen Zeitraum produziert. Dabei wurden $116\,\kilojoule$ elektrischer Energie verbraucht. Die Wärme wurde genutzt, um ein Wassertank zu erwärmen. Dieser verliert im Laufe der betrachteten Zeit $15\,\kilojoule$ an die Umgebung. Wieviel Wärmeenergie hat der Wasseertank abbekommen? Wieviel Wärmeenergie wurde an die Umgebung verloren? 
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für das korrekte Vorgehen bei der Lösung mathematischer Aufgaben vergeben. Weiterhin werden Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben.]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[Der Heizstab wird mit **h**, der Wassertank mit **w**, und die Umgebung mit **u** indiziert. Der innere Energie des Wassertanks ist
+$$
+\Delta U\sub{w} = Q\sub{w} + W\sub{w} + Q\sub{w,u}.\;*
+$$
+Es wird keine Arbeit geleistet, also $W\sub{w} = 0$. Die empfangene Wärmeenergie ist die des Heizstabs, also $Q\sub{w} = Q\sub{h}$. Daraus folgt
+$$
+\Delta U\sub{w} = 100\,\kilojoule + (-15\,\kilojoule) = 85\,\kilojoule\;**
+$$
+Der Wassertank bekommt $100\,\kilojoule$ Wärmeenergie ab\*.
+Die Wärmeenergie, die in die Umgebung entweicht ist
+$$
+Q\sub{u} = Q\sub{h,u} + Q\sub{w,u}\;*
+$$
+und numerisch
+$$
+Q\sub{u} = -16\,\kilojoule + (-15\,\kilojoule) = -31\,\kilojoule\;**
+$$
+In die Umgebung entweichen $31\,\kilojoule$\*.]{fg="green-shade-3"}
+:::
+
+```{r}
+#| output: false
+
+task <- tibble::tibble(
+    task = "Energieerhaltung",
+    level = 2,
+    base_points = 6,
+    max_base_points = 6 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+Was sagt die Energieerhaltung grundsätzlich aus? Was bedeutet das für ein isoliertes System? Was bedeutet das für ein offenes System?  
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[Die Energieerhaltung sagt aus, dass Energie weder geschaffen noch vernichtet werden kann\*\*. Für ein isoliertes System heisst das, dass die innere Energie sich nicht verändert\*\*. Für ein offenes System bedeutet das, dass die innere Energie nur durch Abgabe von Energie in die Umgebung oder Aufnahmen von Energie aus der Umgebung erfolgen kann\*\*.]{fg="green-shade-3"}
+:::
+
+```{r}
+#| output: false
+
+task <- tibble::tibble(
+    task = "Die 10 Prozent Regel",
+    level = 2,
+    base_points = 6,
+    max_base_points = 7 
+) |>
+    dplyr::mutate(
+        level_points = base_points * level,
+        max_level_points = max_base_points * level
+    )
+
+tasks <- tasks |> tibble::add_row(task)
+``` 
+
+### `{r} task$task`
+
+In einem Ökosystem wird die Biomasse als Nahrung zur Energiegewinnung genutzt. Dabei wird die Nahrung in Form von Biomasse von den Pflanzen über die Pflanzenfresser, zu den Fleischfresser, und schliesslich zum Apexpredator weitergereicht. In jeder Stufe werden ungefähr 10% der Biomasse für Arbeit verwertet. Wenn die anfängliche Biomasse den Energiegehalt $E_0$ besitzt, wieviel ist nach vier Stufen davon übrig? Wieviel ist insgesamt verloren gegangen? 
+
+[Du kannst `{r} task$level_points` und maximal `{r} task$max_level_points` Aufgabenpunkte bekommen. Punkte werden für das korrekte Vorgehen bei der Lösung mathematischer Aufgaben vergeben. Weiterhin werden Aussagen nur unter Einbeziehung und Beachtung von Fachsprache vergeben.]{fg="purple"}
+
+::: {.content-hidden unless-meta="show-rating"}
+[Die Arbeitsenergie, die nach $n$ Stufen noch da ist beträgt
+$$
+E_n = 0.1^n E_0.\;*
+$$
+Nach vier Stufen ist die verbleibende Arbeitsenergie
+$$
+E_4 = 0.1^4 E_0 = \left( \frac{1}{10} \right)^4 E_0 = 10^{-4} E_0.\;*
+$$
+Nach vier Trophiestufen, ist nur noch ein Zehntausendstel der anfänglichen Energie vorhanden\*. Die an die Umgebung verlorene Energie lässt sich so berechnen
+$$
+E_{u,n} = 0.9^n E_0.\;*
+$$
+Nach vier Stufen ist die verlorene Energie
+$$
+E_{u,4} = 0.9^4 E_0 = \left( \frac{9}{10} \right)^4 E_0 = \frac{9^4}{10000} E_0 = 0.66 E_0.\;*
+$$
+Nach vier Trophiestufen, sind 66% der anfänglichen Energie an die Umgebung verloren gegangen\*.]{fg="green-shade-3"}
+:::
+
